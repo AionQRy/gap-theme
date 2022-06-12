@@ -1,0 +1,52 @@
+{
+  "name": "gap-theme",
+  "private": true,
+  "description": "Gap Theme Website",
+  "version": "0.1.0",
+  "author": "Akegapol Pinyoupun <aionqq500@gmail.com>",
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.15.2",
+    "gatsby-plugin-catch-links": "^4.16.0",
+    "gatsby-plugin-gatsby-cloud": "^4.15.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.15.1",
+    "gatsby-plugin-manifest": "^4.15.1",
+    "gatsby-plugin-offline": "^5.15.1",
+    "gatsby-plugin-react-helmet": "^5.15.0",
+    "gatsby-plugin-sharp": "^4.15.1",
+    "gatsby-plugin-styled-components": "^5.15.0",
+    "gatsby-source-filesystem": "^4.15.0",
+    "gatsby-source-wordpress": "^6.16.1",
+    "gatsby-source-wordpress-experimental": "^7.0.6",
+    "gatsby-transformer-sharp": "^4.15.1",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
