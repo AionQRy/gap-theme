@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  background: #fdf3fa;
-  height: 110px;
+  background: #fff;
   border-bottom: 1px solid #e7e7e7;
   position: fixed;
   width: 100%;
@@ -10,17 +9,24 @@ export const Wrapper = styled.header`
 `;
 
 export const Content = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-width: 1180px;
+  max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 1em 0;
+  grid-gap: 20px;
+
+  .box-navigation {
+    display: grid;
+    justify-content: right;
+  }
 
   img {
     width: 200px;
     margin: 0;
-    padding: 12px 0 0 0;
+    padding: 0;
   }
 `;

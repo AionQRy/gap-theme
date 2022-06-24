@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
-  font-family: 'Teko', Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
+  font-family: 'Open Sans','Kanit',sans-serif;
+  text-transform: capitalize;
   color: #212121;
   font-size: 1rem;
   font-weight: 600;
@@ -10,7 +10,12 @@ export const Wrapper = styled.nav`
   display: none;
 
   .nav-active {
-    color: #ee2562;
+    color: #fff;
+    background: #ec3529;
+    border-radius: 50px;
+    :hover{
+      color: #fff;
+    }
   }
 
   @media (min-width: 992px) {
@@ -21,23 +26,39 @@ export const Wrapper = styled.nav`
   @media (min-width: 1200px) {
     font-size: 1rem;
   }
-
+  ul.menu-list {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  ul{
+    margin: 0;
+  }
   ul li {
     display: block;
-    margin: 0 10px 0 0;
+    margin: 0;
     float: left;
-    height: 30px;
     position: relative;
 
     a {
       display: flex;
-      padding: 0 0 0 10px;
       transition: all 0.2s ease;
       text-decoration: none;
       color: #000;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      gap: 3px;
 
-      div {
-        margin: -4px 0 0 5px;
+      div.arrow-box {
+          display: block;
+          line-height: 1;
+
+        svg{
+          width: 19px;
+          height: 19px;
+        }
       }
     }
   }
@@ -51,7 +72,7 @@ export const Wrapper = styled.nav`
   }
 
   ul li a:hover {
-    color: #ee2562;
+    color: #ec3529;
   }
 
   ul ul {
@@ -60,22 +81,46 @@ export const Wrapper = styled.nav`
     position: absolute;
     left: 0;
     margin: 0;
-    top: 30px;
+    top: 42px;
     text-transform: none;
     background: #fff;
-    padding: 15px 10px 10px 10px;
-    box-shadow: 0px 6px 23px -10px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    box-shadow: 0px 6px 23px -10px rgb(58 58 58 / 22%);
+    
+    :after{
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+      top: -9px;
+      left: 10px;
+    }
   }
 
   ul ul li {
     width: auto;
     min-width: 170px;
+
+    :last-child a{
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+  ul.sub-menu li:first-child a {
+    padding-top: 0;
   }
 
   ul ul li a {
-    padding: 5px 10px;
+    padding: 10px 0px;
     text-decoration: none;
     white-space: nowrap;
+    border-bottom: 1px solid rgb(224 224 224 / 44%);
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
   }
 
   @keyframes fadeInMenu {
