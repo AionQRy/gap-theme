@@ -130,10 +130,16 @@ export const Overlay = styled.div`
       }
       span.arrow-sub_menu {
         position: absolute;
-        top: 18px;
+        top: 8px;
         right: 0;
         transition: all 0.3s ease;
-        
+        height: 40px;
+        width: 40px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
         svg {
           height: 20px;
           width: 20px;
