@@ -10,11 +10,18 @@ export const Overlay = styled.div`
   z-index: 100000;
   background: #fff;
   left: 0px;
-  padding: 2em 1.5em;
+  padding: 2em 2em;
   transition: all 0.3s ease;
   top: 0;
   display: grid;
   grid-template-rows: 50px 1fr 100px;
+  
+  @media (max-width: 1024px) {
+    padding: 2em 2em;
+  }
+  @media (max-width: 575.98px) {
+    padding: 1em 1.5em;
+  }
 
   .overlayMenu {
     text-align: center;

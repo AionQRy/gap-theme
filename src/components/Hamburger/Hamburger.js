@@ -1,17 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { HamburgerButton } from "./Hamburger.styles"
 
-const Hamburger = ({ handleOverlayMenu }) => {
+const Hamburger = ({ menuOpen, handleOverlayMenu }) => {
 
-  const [isActive, setIsActive] = useState(false)
-  const handleClick = event => {
-    // toggle isActive state on click
-    setIsActive(current => !current)
-  }
   return (
-        <HamburgerButton onClick={handleOverlayMenu}>
+        <HamburgerButton menuOpen={menuOpen} onClick={handleOverlayMenu}>
             <div class="hamburger-box" >
-              <div className={isActive ? 'hamburger active' : 'hamburger'} id="hamburger" onClick={handleClick}>
+              <div className={menuOpen ? 'hamburger active' : 'hamburger'} id="hamburger">
                 <span class="line"></span>
                 <span class="line"></span>
                 <span class="line"></span>

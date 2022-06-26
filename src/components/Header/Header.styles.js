@@ -6,6 +6,11 @@ export const Wrapper = styled.header`
   position: fixed;
   width: 100%;
   z-index: 10000;
+  display: block;
+  
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`

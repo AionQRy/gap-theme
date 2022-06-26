@@ -7,7 +7,11 @@ export const Wrapper = styled.header`
   position: fixed;
   width: 100%;
   z-index: 10000;
+  display: none;
   
+  @media (max-width: 1024px) {
+    display: block;
+  }
   @media (max-width: 575.98px) {
     padding: 15px 1.5em;
   }

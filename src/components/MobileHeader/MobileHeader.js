@@ -19,7 +19,7 @@ const MobileHeader = () => {
                     <img src={Logo} alt={site.siteMetadata.title} />
                 </Link>
             </div>
-            <Hamburger handleOverlayMenu={handleOverlayMenu} />          
+            <Hamburger menuOpen={menuOpen} handleOverlayMenu={handleOverlayMenu} />          
         </Content>
         <OverlayMenu menuOpen={menuOpen} callback={handleOverlayMenu} menu={menu.menuItems.nodes} site={site} />
     </Wrapper>
