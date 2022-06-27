@@ -38,7 +38,7 @@ const OverlayMenu = ( { menuOpen, callback, site, menu } ) => {
           {menu.map(OvermenuItem =>
             !OvermenuItem.parentId ? (
               <li key={OvermenuItem.id}>
-                <Link to={OvermenuItem} className="overmenuitem" activeClassName="nav-active">
+                <Link to={OvermenuItem.url} className="overmenuitem" activeClassName="nav-active">
                   {OvermenuItem.label}
                   {OvermenuItem.childItems.nodes.length !== 0 ? (
                     <ul className="sub-menu">
