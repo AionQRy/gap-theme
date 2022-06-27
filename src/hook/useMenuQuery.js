@@ -9,7 +9,7 @@ export const useMenuQuery = () => {
           siteUrl
         }
       }
-      menu: wpMenu(name: { eq: "Primary Menu" }) {
+      menu: wpMenu(slug: { eq: "primary-menu" }) {
         menuItems {
           nodes {
             label
