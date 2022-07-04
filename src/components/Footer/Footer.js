@@ -1,9 +1,11 @@
 import React from 'react'
 import Social from './Social/Social'
 import BotFooter from './BotFooter/BotFooter'
-import rightSvg from '../../images/arrow-right.svg'
 import {Wrapper} from './Footer.styles'
 import { useFooterQuery } from '../../hook/useFooterQuery'
+import { Link } from 'gatsby'
+import { ArrowRight  } from 'react-feather';
+
 
 const Footer = () => {
     const { socialFooter } = useFooterQuery()
@@ -28,9 +30,9 @@ const Footer = () => {
                         </div>
                         <div className="detail">
                             <ul className="ul-contact">
-                                <li>Email:<a href="mailto:aionqq500@gmail.com" target="_blank">ส่งเมลหาเรา</a></li>
-                                <li>โทร:<a href="tel:+66625970504" target="_blank">062-597-0504 ฝ่ายขาย</a></li>
-                                <li>Line ID:<a href="https://line.me/ti/p/PAp76vLlok" target="_blank">_gapgap26</a></li>
+                                <li>Email:<a href="mailto:aionqq500@gmail.com"  target="_blank" rel="noopener noreferrer">ส่งเมลหาเรา</a></li>
+                                <li>โทร:<a href="tel:+66625970504"  target="_blank" rel="noopener noreferrer">062-597-0504 ฝ่ายขาย</a></li>
+                                <li>Line ID:<a href="https://line.me/ti/p/PAp76vLlok"  target="_blank" rel="noopener noreferrer">_gapgap26</a></li>
                             </ul>
                             <h4>รับทำ WordPress</h4>
     
@@ -42,11 +44,11 @@ const Footer = () => {
                         </div>
                         <div className="detail">
                             <ul className="ul-service">
-                                <li><a href=""><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>รับทำเว็บไซต์ WordPress</a></li>
-                                <li><a href=""><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>รับทำเว็บไซต์ E-Commerce</a></li>
-                                <li><a href=""><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>รับทำเว็บไซต์ WooCommerce</a></li>
-                                <li><a href=""><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>รับทำเว็บไซต์ บริษัท/องค์กร</a></li>
-                                <li><a href=""><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>รับทำระบบเว็บไซต์</a></li>
+                                <li><Link to="#"><ArrowRight/>รับทำเว็บไซต์ WordPress</Link></li>
+                                <li><Link to="#"><ArrowRight/>รับทำเว็บไซต์ E-Commerce</Link></li>
+                                <li><Link to="#"><ArrowRight/>รับทำเว็บไซต์ WooCommerce</Link></li>
+                                <li><Link to="#"><ArrowRight/>รับทำเว็บไซต์ บริษัท/องค์กร</Link></li>
+                                <li><Link to="#"><ArrowRight/>รับทำระบบเว็บไซต์</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -55,10 +57,10 @@ const Footer = () => {
                             <h3>ตัวอย่างผลงาน</h3>
                         </div>
                         <div className="detail">
-                            <a href="" className="btn-next">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>                            
+                            <Link to="#" className="btn-next">
+                                <ArrowRight/>                            
                                 ไปที่หน้าผลงาน
-                            </a>
+                            </Link>
                         </div>
                         <div className="title">
                             <h3>ช่องทางติดต่ออนไลน์</h3>

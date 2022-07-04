@@ -5,11 +5,11 @@ const Hamburger = ({ menuOpen, handleOverlayMenu }) => {
 
   return (
         <HamburgerButton menuOpen={menuOpen} onClick={handleOverlayMenu}>
-            <div class="hamburger-box" >
+            <div className="hamburger-box" >
               <div className={menuOpen ? 'hamburger active' : 'hamburger'} id="hamburger">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
               </div>
             </div>
         </HamburgerButton>

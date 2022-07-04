@@ -1,16 +1,20 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  font-family: 'Teko', Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: 1rem;
-  margin: 10px 0;
-  padding-left: 0;
-  margin-left: 0;
+font-weight: 600;
+font-size: 16px;
+margin: 0;
+padding: 15px 0;
+border-bottom: 1px solid rgb(0 0 0 / 9%);
 
-  @media (min-width: 992px) {
-    padding-left: 25%;
-    margin-left: 15px;
+  a {
+    text-decoration: auto;
+    color: #ec3529;
+    font-weight: 600;
+    
+    :hover{
+      opacity: 0.8;
+    }
   }
 
   .divider {
