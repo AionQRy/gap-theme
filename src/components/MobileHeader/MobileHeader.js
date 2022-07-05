@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { Wrapper, Content } from './MobileHeader.styles'
 import Hamburger from '../Hamburger/Hamburger'
@@ -11,8 +11,30 @@ const MobileHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     const handleOverlayMenu = () => setMenuOpen( prev => !prev )
 
+      // console.log(menu)
+      const [sticky, setSticky] = useState("");
+
+      // on render, set listener
+      useEffect(() => {
+        // console.log("hello");
+        window.addEventListener("scroll", isSticky);
+        return () => {
+          window.removeEventListener("scroll", isSticky);
+        };
+      }, []);
+    
+      const isSticky = () => {
+        /* Method that will fix header after a specific scrollable */
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 250 ? "is-sticky" : "";
+        setSticky(stickyClass);
+        // console.log(stickyClass);
+      };
+    
+      const classes = `header ${sticky}`;
+
   return (
-    <Wrapper>
+    <Wrapper className={classes}>
         <Content>
             <div className="box-logo">
                 <Link to="/">

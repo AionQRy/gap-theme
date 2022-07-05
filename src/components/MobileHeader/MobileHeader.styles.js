@@ -4,7 +4,7 @@ export const Wrapper = styled.header`
   padding: 20px 2em;
   background: #fff;
   border-bottom: 1px solid #e7e7e7;
-  position: fixed;
+  position: relative;
   width: 100%;
   z-index: 10000;
   display: none;

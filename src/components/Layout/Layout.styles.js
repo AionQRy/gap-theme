@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const Primary = styled.main`
-  padding: 91px 0 0 0;
+  
 `;
 
 export const GlobalStyles = createGlobalStyle`
@@ -20,6 +20,16 @@ export const GlobalStyles = createGlobalStyle`
     color: #fff;
   }
 
+  header.is-sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 0 0px 8px 0 rgb(0 0 0 / 8%);
+    transition: all 0.3s; 
+  }
+  
   .v-container {
     display: block;
     max-width: 1140px;

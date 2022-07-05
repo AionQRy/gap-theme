@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout/Layout"
 import PageHero from "../components/PageHero/PageHero"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
+import PageNoHero from "../components/PageHero/PageNoHero"
 // import PageSidebar from "../components/PageSidebar/PageSidebar"
 
 const Wrapper = styled.div`
@@ -22,6 +23,7 @@ const ContentWrapper = styled.div`
 
   @media (max-width: 1024px) {
     padding: 2em 2em;
+    grid-gap: 25px;
   }
   @media (max-width: 575.98px) {
     padding: 2em 1.5em;
@@ -33,6 +35,13 @@ const PageContent = styled.article`
   grid-gap: 35px;
   width: 100%;
   position: relative;
+
+  @media (max-width: 1024px) {
+    grid-gap: 25px;
+  }
+  @media (max-width: 575.98px) {
+    grid-gap: 20px;
+  }
 
   h1{
     margin: 0;
@@ -58,14 +67,18 @@ const PageContent = styled.article`
         max-width: 115px;
         text-align: center;
     }
+    @media (max-width: 1024px) {
+      font-size: 38px;
+    }
+    @media (max-width: 575.98px) {
+      font-size: 34px;
+    }
   }
 `
 
 const PageTemplate = ({ data }) => (
 
   <Layout>
-    {console.log( data.wpPage.featuredImage.node.localFile.childImageSharp
-            .gatsbyImageData )}
     {data.wpPage.featuredImage ? (
       <PageHero
         img={
@@ -73,7 +86,8 @@ const PageTemplate = ({ data }) => (
             .gatsbyImageData
         }
       />
-    ) : null}
+    ) : <PageNoHero />
+    }   
     <Wrapper>    
       <ContentWrapper>
       <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} pageData={data.wpPage} />

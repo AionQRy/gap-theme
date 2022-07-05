@@ -7,6 +7,10 @@ margin: 0;
 padding: 15px 0;
 border-bottom: 1px solid rgb(0 0 0 / 9%);
 
+@media (max-width: 1024px) {
+  padding-top: 0;
+}
+
   a {
     text-decoration: auto;
     color: #ec3529;

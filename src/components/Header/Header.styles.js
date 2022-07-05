@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.header`
   background: #fff;
-  border-bottom: 1px solid #e7e7e7;
-  position: fixed;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
   width: 100%;
   z-index: 10000;
   display: block;
