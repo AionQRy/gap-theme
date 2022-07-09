@@ -141,12 +141,4 @@ flex-direction: column;
             animation-iteration-count:1
         }
     }
-    @keyframes elementor-animation-push{
-        50%{
-            transform:scale(0.8)
-        }
-        100%{
-            transform:scale(1)
-        }
-    }
 `;

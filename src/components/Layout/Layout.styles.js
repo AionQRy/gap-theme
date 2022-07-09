@@ -38,6 +38,15 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
   }
 
+  @keyframes elementor-animation-push{
+    50%{
+        transform:scale(0.8)
+    }
+    100%{
+        transform:scale(1)
+    }
+  }
+
   h2,
   article,
   aside,

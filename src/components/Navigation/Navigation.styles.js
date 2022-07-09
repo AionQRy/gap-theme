@@ -113,6 +113,11 @@ export const Wrapper = styled.nav`
     padding-top: 0;
   }
 
+  ul.sub-menu li .nav-active {
+    background: transparent;
+    color: #ec3529;
+  }
+
   ul ul li a {
     padding: 10px 0px;
     text-decoration: none;

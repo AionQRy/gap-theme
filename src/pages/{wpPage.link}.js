@@ -75,6 +75,17 @@ const PageContent = styled.article`
       font-size: 34px;
     }
   }
+
+  p{
+    font-size: 16px;
+  }
+
+  img {
+    object-fit: cover;
+    display: block;
+    height: auto;
+    width: auto;
+  }
 `
 
 const PageTemplate = ({ data }) => (
@@ -92,8 +103,12 @@ const PageTemplate = ({ data }) => (
     <Wrapper>    
       <ContentWrapper>
       <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} pageData={data.wpPage} />
-        <PageContent>
-          <h1 dangerouslySetInnerHTML={{ __html: data.wpPage.title }} />
+        <PageContent>      
+          {data.wpPage.title ? (
+            <h1 dangerouslySetInnerHTML={{ __html: data.wpPage.title }} />
+          ) : <h1 dangerouslySetInnerHTML={{ __html: "ไม่มีชื่อหน้า" }} />
+          }
+
           {data.wpPage.content ? (
             <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} />
           ) : <NotFound />
