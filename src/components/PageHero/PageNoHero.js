@@ -1,6 +1,4 @@
 import React from "react"
-import { Bgimg } from "./PageNoHero.styles"
-import BgPage from '../../images/bg-page.webp';
 import { StaticImage } from "gatsby-plugin-image"
 
 const PageNoHero = () =>  <StaticImage

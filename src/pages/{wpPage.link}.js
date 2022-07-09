@@ -7,6 +7,7 @@ import Layout from "../components/Layout/Layout"
 import PageHero from "../components/PageHero/PageHero"
 import BreadCrumb from "../components/BreadCrumb/BreadCrumb"
 import PageNoHero from "../components/PageHero/PageNoHero"
+import NotFound from "../components/NotFound/NotFound"
 // import PageSidebar from "../components/PageSidebar/PageSidebar"
 
 const Wrapper = styled.div`
@@ -79,7 +80,7 @@ const PageContent = styled.article`
 const PageTemplate = ({ data }) => (
 
   <Layout>
-    {data.wpPage.featuredImage ? (
+    {/* {data.wpPage.featuredImage ? (
       <PageHero
         img={
           data.wpPage.featuredImage.node.localFile.childImageSharp
@@ -87,13 +88,17 @@ const PageTemplate = ({ data }) => (
         }
       />
     ) : <PageNoHero />
-    }   
+    }    */}
     <Wrapper>    
       <ContentWrapper>
       <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} pageData={data.wpPage} />
         <PageContent>
           <h1 dangerouslySetInnerHTML={{ __html: data.wpPage.title }} />
-          <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} />
+          {data.wpPage.content ? (
+            <div dangerouslySetInnerHTML={{ __html: data.wpPage.content }} />
+          ) : <NotFound />
+          }
+          
           
         </PageContent>
       </ContentWrapper>
