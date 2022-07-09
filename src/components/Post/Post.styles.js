@@ -26,7 +26,6 @@ export const PostContent = styled.article`
   grid-gap: 35px;
   width: 100%;
   position: relative;
-  max-width: 800px;
   margin: 0 auto;
 
   @media (max-width: 1024px) {
@@ -81,23 +80,21 @@ export const PostContent = styled.article`
   }
 `
 export const SocialWrapper = styled.div`
-  
-  margin: 0 auto;
+
 `
 export const TitleBox = styled.div`
-  
-  margin: 0 auto;
+
 `
 export const ContentBox = styled.div`
-  
+  display: block;
+  max-width: 800px;
   margin: 0 auto;
 `
 export const AuthorBox = styled.div`
   
-  margin: 0 auto;
+
 `
 export const FeatureImagePost = styled.div`
-  
   margin: 0 auto;
 `
 export const TermBox = styled.div`

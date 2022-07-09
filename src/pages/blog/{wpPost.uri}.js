@@ -41,33 +41,7 @@ const title = 'GitHub';
 
 const PostTemplate = ({ data }) => (
   <Layout>
-    <Wrapper>
-      {/* <BreadCrumb
-        parent={{
-          uri: "/blog/all-posts",
-          title: "blog",
-        }}
-      /> */}
-      <ContentWrapper>
-        {/* <PostSidebar
-          date={data.post.date}
-          author={data.post.author.node.name}
-          categories={data.post.categories.nodes}
-        /> */}
-        <PostContent>
-          
-          <TitleBox>
- 
-            { data.post.title ?(
-                <h1 dangerouslySetInnerHTML={{ __html: data.post.title }} />
-            ) : <h1 dangerouslySetInnerHTML={{ __html: "ไม่มีชื่อหน้า" }} />
-            }
-          </TitleBox>
-          
-          <AuthorBox>
-
-          </AuthorBox>
-          <FeatureImagePost>
+              <FeatureImagePost>
           {data.post.featuredImage ? (
             <PageHero
                 img={
@@ -77,47 +51,66 @@ const PostTemplate = ({ data }) => (
             ) : <PageNoHero />
           }   
           </FeatureImagePost>
+    <Wrapper>
+      {/* <BreadCrumb
+        parent={{
+          uri: "/blog/all-posts",
+          title: "blog",
+        }}
+      /> */}
+      <ContentWrapper>
+        <PostContent>
+            <TitleBox>
+        
+            { data.post.title ?(
+                <h1 dangerouslySetInnerHTML={{ __html: data.post.title }} />
+            ) : <h1 dangerouslySetInnerHTML={{ __html: "ไม่มีชื่อหน้า" }} />
+            }
+            </TitleBox>
 
-          <ContentBox>
-            {data.post.content ?(
-            <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
-             ) : <Notfound/> }
-          </ContentBox>
+            <AuthorBox>
 
-          <TermBox>
-              <div className="TermList_Box Category_Box">
-                    <div className="TitleObject">
-                        <h4 dangerouslySetInnerHTML={{ __html: "หมวดหมู่:" }} />
-                    </div>
-                    <div className="DetailBox">
-                        <ul className="NavList_Term">                      
-                            {data.post.categories.nodes.map( CategoryList => 
-                                <li key={CategoryList.id} className="ListTerm">
-                                    <Link to={CategoryList.uri}  className="ListTermItem">
-                                        <span dangerouslySetInnerHTML={{ __html: CategoryList.name }} />  
-                                    </Link>                                 
-                                </li>
-                            )}                    
-                        </ul>
-                    </div>
-              </div>
-              <div className="TermList_Box Tag_Box">
-                    <div className="TitleObject">
-                        <h4 dangerouslySetInnerHTML={{ __html: "แท็ก:" }} />
-                    </div>
-                    <div className="DetailBox">
-                        <ul className="NavList_Term">                      
-                            {data.post.tags.nodes.map( TagsList => 
-                                <li key={TagsList.id} className="ListTerm">
-                                    <Link to={TagsList.uri}  className="ListTermItem">
-                                        <span dangerouslySetInnerHTML={{ __html: TagsList.name }} />  
-                                    </Link>                                 
-                                </li>
-                            )}                    
-                        </ul>
-                    </div>
-              </div>            
-          </TermBox>
+            </AuthorBox>
+            <ContentBox>
+                {data.post.content ?(
+                <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
+                ) : <Notfound/> }
+            </ContentBox>
+
+            <TermBox>
+                <div className="TermList_Box Category_Box">
+                        <div className="TitleObject">
+                            <h4 dangerouslySetInnerHTML={{ __html: "หมวดหมู่:" }} />
+                        </div>
+                        <div className="DetailBox">
+                            <ul className="NavList_Term">                      
+                                {data.post.categories.nodes.map( CategoryList => 
+                                    <li key={CategoryList.id} className="ListTerm">
+                                        <Link to={CategoryList.uri}  className="ListTermItem">
+                                            <span dangerouslySetInnerHTML={{ __html: CategoryList.name }} />  
+                                        </Link>                                 
+                                    </li>
+                                )}                    
+                            </ul>
+                        </div>
+                </div>
+                <div className="TermList_Box Tag_Box">
+                        <div className="TitleObject">
+                            <h4 dangerouslySetInnerHTML={{ __html: "แท็ก:" }} />
+                        </div>
+                        <div className="DetailBox">
+                            <ul className="NavList_Term">                      
+                                {data.post.tags.nodes.map( TagsList => 
+                                    <li key={TagsList.id} className="ListTerm">
+                                        <Link to={TagsList.uri}  className="ListTermItem">
+                                            <span dangerouslySetInnerHTML={{ __html: TagsList.name }} />  
+                                        </Link>                                 
+                                    </li>
+                                )}                    
+                            </ul>
+                        </div>
+                </div>            
+            </TermBox>
             <SocialWrapper>
                 <FacebookShareButton
                 url={shareUrl}
