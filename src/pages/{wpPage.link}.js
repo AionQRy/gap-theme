@@ -84,7 +84,6 @@ const PageContent = styled.article`
     object-fit: cover;
     display: block;
     height: auto;
-    width: auto;
   }
 `
 

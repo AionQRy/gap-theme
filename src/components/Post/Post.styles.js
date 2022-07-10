@@ -79,9 +79,6 @@ export const PostContent = styled.article`
     padding-top: 15px;
   }
 `
-export const SocialWrapper = styled.div`
-
-`
 export const TitleBox = styled.div`
 
 `

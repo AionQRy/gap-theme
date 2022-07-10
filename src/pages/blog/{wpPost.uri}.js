@@ -6,24 +6,10 @@ import Notfound from "../../components/NotFound/NotFound"
 // import BreadCrumb from "../../components/BreadCrumb/BreadCrumb"
 import PageHero from "../../components/PageHero/PageHero"
 import PageNoHero from "../../components/PageHero/PageNoHero"
-
+import Social from "../../components/Post/Social/Social"
 import { Link } from "gatsby"
 import { StaticImage } from 'gatsby-plugin-image'
-import {
-    FacebookShareCount,
-    PinterestShareCount,
-    FacebookShareButton,
-    FacebookMessengerShareButton,
-    FacebookMessengerIcon,
-    TwitterShareButton,
-    TelegramShareButton,
-    LineShareButton,
-    FacebookIcon,
-    TwitterIcon,
-    LinkedinIcon,
-    TelegramIcon,
-    LineIcon,
-} from "react-share";
+
 import {
     Wrapper,
     ContentWrapper,
@@ -35,9 +21,6 @@ import {
     TermBox,
     FeatureImagePost
 } from "../../components/Post/Post.styles"
-
-const shareUrl = 'http://github.com';
-const title = 'GitHub';
 
 const PostTemplate = ({ data }) => (
   <Layout>
@@ -72,6 +55,7 @@ const PostTemplate = ({ data }) => (
 
             </AuthorBox>
             <ContentBox>
+            <Social/>
                 {data.post.content ?(
                 <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
                 ) : <Notfound/> }
@@ -111,15 +95,6 @@ const PostTemplate = ({ data }) => (
                         </div>
                 </div>            
             </TermBox>
-            <SocialWrapper>
-                <FacebookShareButton
-                url={shareUrl}
-                quote={title}
-                className="Demo__some-network__share-button"
-            >
-                <FacebookIcon size={32} round />
-            </FacebookShareButton>
-            </SocialWrapper>
         </PostContent>
       </ContentWrapper>
     </Wrapper>
