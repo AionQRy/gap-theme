@@ -103,7 +103,7 @@ export const Overlay = styled.div`
       border-bottom: 1px solid gainsboro;
 
       a {
-        color: #000;
+        color: #262626;
         text-decoration: auto;
         font-size: 18px;
         font-weight: 600;

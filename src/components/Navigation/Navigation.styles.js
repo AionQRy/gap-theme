@@ -44,7 +44,7 @@ export const Wrapper = styled.nav`
       display: flex;
       transition: all 0.2s ease;
       text-decoration: none;
-      color: #000;
+      color: #262626;
       padding: 10px 20px;
       font-size: 16px;
       font-weight: 600;

@@ -24,4 +24,9 @@ border-bottom: 1px solid rgb(0 0 0 / 9%);
   .divider {
     margin: 0 10px;
   }
+
+  .mainBreadCrumb{
+    font-weight: 400;
+    color: #262626;
+  }
 `;

@@ -16,7 +16,7 @@ const BreadCrumb = ({ parent, pageData }) => (
         <span dangerouslySetInnerHTML={{ __html: pageData.title }} />
       </Link>
       <span className="divider">/</span>
-      <span dangerouslySetInnerHTML={{ __html: parent.title }} />
+      <span className="mainBreadCrumb" dangerouslySetInnerHTML={{ __html: parent.title }} />
       </>
     ) :      
        <>

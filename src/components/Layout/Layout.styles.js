@@ -107,7 +107,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   mark {
     background-color: #ff0;
-    color: #000;
+    color: #262626;
   }
   small {
     font-size: 80%;
@@ -264,7 +264,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #262626;
   }
 
   p {
@@ -330,7 +330,7 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 200;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    color: #000;
+    color: #262626;
     text-transform: uppercase;
   }
   h6 {
@@ -635,7 +635,7 @@ export const GlobalStyles = createGlobalStyle`
     content: '';
   }
 
-  ._heading, .btn, .button, .menu, blockquote, legend, fieldset, table, button, h1, h2, h3, h4, h5, h6, input, select, textarea, nav, label, span.jet-headline__label, span.jet-headline__part, span.elementor-icon-list-text, .elementor-post-navigation__link span, span.timeline-label, time, span.head_tab, span.ha-tab__title-text, ul.menu_setting li span, .text, .error, .success, .tab-post li, .ha-advanced-heading-wrap span, span.elementor-post-date, .breadcrumb-label, li, ul li span, .elementor-text-editor.elementor-clearfix, .td-paragraph-padding-0, span.elementor-button-text, a, span.custom-select-trigger, p {
+  ._heading, .btn, .button, .menu, blockquote, legend, fieldset, table, button, h1, h2, h3, h4, h5, h6, input, select, textarea, nav, label, span.jet-headline__label, span.jet-headline__part, span.elementor-icon-list-text, .elementor-post-navigation__link span, span.timeline-label, time, span.head_tab, span.ha-tab__title-text, ul.menu_setting li span, .text, .error, .success, .tab-post li, .ha-advanced-heading-wrap span, span.elementor-post-date, .breadcrumb-label, li, ul li span, .elementor-text-editor.elementor-clearfix, .td-paragraph-padding-0, span.elementor-button-text, a, span.custom-select-trigger, p, span {
     font-family: 'Open Sans', 'Kanit', sans-serif;
     margin: 0;
   }

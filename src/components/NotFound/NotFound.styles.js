@@ -85,7 +85,7 @@ flex-direction: column;
         display: block;
         font-size: 45px;
         font-weight: 400;
-        color: #000;
+        color: #262626;
         margin: 0 auto;
         position: relative;
 
@@ -99,7 +99,7 @@ flex-direction: column;
     h4{
         font-size: 24px;
         font-weight: 500;
-        color: #000;
+        color: #262626;
         text-align: center;
 
         @media (max-width: 1024px) {

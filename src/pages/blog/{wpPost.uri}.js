@@ -3,22 +3,21 @@ import { graphql } from "gatsby"
 
 import Layout from "../../components/Layout/Layout"
 import Notfound from "../../components/NotFound/NotFound"
-// import BreadCrumb from "../../components/BreadCrumb/BreadCrumb"
+import BreadCrumbPost from "../../components/BreadCrumb/BreadCrumbPost"
 import PageHero from "../../components/PageHero/PageHero"
 import PageNoHero from "../../components/PageHero/PageNoHero"
 import Social from "../../components/Post/Social/Social"
-import { Link } from "gatsby"
-import { StaticImage } from 'gatsby-plugin-image'
+import Term from "../../components/Post/Term/Term"
+import RecentPost from "../../components/Post/RecentPost/RecentPost"
+
 
 import {
     Wrapper,
     ContentWrapper,
     PostContent,
-    SocialWrapper,
     TitleBox,
     ContentBox,
     AuthorBox,
-    TermBox,
     FeatureImagePost
 } from "../../components/Post/Post.styles"
 
@@ -35,14 +34,16 @@ const PostTemplate = ({ data }) => (
           }   
           </FeatureImagePost>
     <Wrapper>
-      {/* <BreadCrumb
-        parent={{
-          uri: "/blog/all-posts",
-          title: "blog",
-        }}
-      /> */}
       <ContentWrapper>
         <PostContent>
+        <BreadCrumbPost
+        parent={{
+          uri: "/blog/all-posts",
+          title: "บทความ",
+          Category: data.post.title,
+          CurrentTitle: data.post.title,
+        }}
+      />
             <TitleBox>
         
             { data.post.title ?(
@@ -55,46 +56,13 @@ const PostTemplate = ({ data }) => (
 
             </AuthorBox>
             <ContentBox>
-            <Social/>
+              <Social/>
                 {data.post.content ?(
                 <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
                 ) : <Notfound/> }
+              <Term TermCategory={data.post.categories.nodes} TermTag={data.post.tags.nodes}/>
             </ContentBox>
-
-            <TermBox>
-                <div className="TermList_Box Category_Box">
-                        <div className="TitleObject">
-                            <h4 dangerouslySetInnerHTML={{ __html: "หมวดหมู่:" }} />
-                        </div>
-                        <div className="DetailBox">
-                            <ul className="NavList_Term">                      
-                                {data.post.categories.nodes.map( CategoryList => 
-                                    <li key={CategoryList.id} className="ListTerm">
-                                        <Link to={CategoryList.uri}  className="ListTermItem">
-                                            <span dangerouslySetInnerHTML={{ __html: CategoryList.name }} />  
-                                        </Link>                                 
-                                    </li>
-                                )}                    
-                            </ul>
-                        </div>
-                </div>
-                <div className="TermList_Box Tag_Box">
-                        <div className="TitleObject">
-                            <h4 dangerouslySetInnerHTML={{ __html: "แท็ก:" }} />
-                        </div>
-                        <div className="DetailBox">
-                            <ul className="NavList_Term">                      
-                                {data.post.tags.nodes.map( TagsList => 
-                                    <li key={TagsList.id} className="ListTerm">
-                                        <Link to={TagsList.uri}  className="ListTermItem">
-                                            <span dangerouslySetInnerHTML={{ __html: TagsList.name }} />  
-                                        </Link>                                 
-                                    </li>
-                                )}                    
-                            </ul>
-                        </div>
-                </div>            
-            </TermBox>
+            <RecentPost />      
         </PostContent>
       </ContentWrapper>
     </Wrapper>

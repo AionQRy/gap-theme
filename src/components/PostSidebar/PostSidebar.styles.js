@@ -25,7 +25,7 @@ export const Menu = styled.ul`
 
   li {
     margin: 0 0 5px 0px;
-    color: #000;
+    color: #262626;
     font-family: 'Teko', Arial;
     font-size: 20px;
     font-weight: 400;
