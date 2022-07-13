@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { SocialWrapper } from './Social.styles';
 import {
@@ -18,8 +18,29 @@ const shareUrl = 'http://github.com';
 const title = 'GitHub';
 
 const Social = () => {
+  const [sticky, setSticky] = useState("");
+
+  // on render, set listener
+  useEffect(() => {
+    console.log("hello");
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    /* Method that will fix header after a specific scrollable */
+    const scrollTop = window.scrollY;
+    const stickyClass = scrollTop >= 800 ? "is-sticky" : "";
+    setSticky(stickyClass);
+    console.log(stickyClass);
+  };
+
+  const classes = `SocialHeader ${sticky}`;
+
   return (
-    <SocialWrapper>
+    <SocialWrapper className={classes}>
         <FacebookShareButton
         url={shareUrl}
         quote={title}

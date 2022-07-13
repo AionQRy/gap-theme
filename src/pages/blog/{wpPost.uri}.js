@@ -8,7 +8,7 @@ import PageHero from "../../components/PageHero/PageHero"
 import PageNoHero from "../../components/PageHero/PageNoHero"
 import Social from "../../components/Post/Social/Social"
 import Term from "../../components/Post/Term/Term"
-import RecentPost from "../../components/Post/RecentPost/RecentPost"
+import RelatedPost from "../../components/RelatedPost/RelatedPost"
 
 
 import {
@@ -62,7 +62,7 @@ const PostTemplate = ({ data }) => (
                 ) : <Notfound/> }
               <Term TermCategory={data.post.categories.nodes} TermTag={data.post.tags.nodes}/>
             </ContentBox>
-            <RecentPost />      
+            <RelatedPost currentPost={data.post} />      
         </PostContent>
       </ContentWrapper>
     </Wrapper>
