@@ -90,7 +90,7 @@ const PageContent = styled.article`
 const PageTemplate = ({ data }) => (
 
   <Layout>
-    {/* {data.wpPage.featuredImage ? (
+    {data.wpPage.featuredImage ? (
       <PageHero
         img={
           data.wpPage.featuredImage.node.localFile.childImageSharp
@@ -98,7 +98,7 @@ const PageTemplate = ({ data }) => (
         }
       />
     ) : <PageNoHero />
-    }    */}
+    }   
     <Wrapper>    
       <ContentWrapper>
       <BreadCrumb parent={data.wpPage.wpParent && data.wpPage.wpParent.node} pageData={data.wpPage} />

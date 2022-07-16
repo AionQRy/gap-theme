@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 export const useRelatedpostQuery = () => {
     const data = useStaticQuery(graphql`
     query RelatedQuery {
-        allWpPost(filter: {terms: {nodes: {elemMatch: {slug: {eq: "football"}}}}}) {
+        allWpPost(filter: {terms: {nodes: {elemMatch: { }}}}) {
             edges {
             node {
                 id
@@ -19,7 +19,14 @@ export const useRelatedpostQuery = () => {
                     }
                     }
                 }
+                }          
+            categories {
+                nodes {
+                    id
+                    slug
+                    uri
                 }
+            }
             }
             }
         }

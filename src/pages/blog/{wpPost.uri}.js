@@ -81,6 +81,7 @@ export const pageQuery = graphql`
           name
         }
       }
+      slug
       date(formatString: "DD MM YYYY")
       categories {
         nodes {
