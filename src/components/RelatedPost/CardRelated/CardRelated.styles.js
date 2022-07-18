@@ -112,7 +112,7 @@ export const ExcerptCardWrapper = styled.div`
         font-size: 14px;
         color: #707070;
         text-decoration: auto;
-        font-weight: 400;
+        font-weight: 300;
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;

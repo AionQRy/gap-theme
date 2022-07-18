@@ -47,7 +47,7 @@ margin-top: 2em;
                 border-radius: 50px;
                 padding: 8px 15px;
                 font-size: 14px;
-                font-weight: 500;
+                font-weight: 400;
                 display: block;
                 line-height: 1;
 
