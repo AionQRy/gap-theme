@@ -18,7 +18,7 @@ export const HamburgerButton = styled.div`
     .line{
       width: 30px;
       height: 3px;
-      background-color: #262626000;
+      background-color: #262626;
       display: block;
       margin: 6px auto;
       -webkit-transition: all 0.2s ease-in-out;

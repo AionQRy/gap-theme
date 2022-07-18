@@ -28,7 +28,7 @@ margin-top: 2em;
 
             li {
                 list-style: none;
-                display: inline-box;
+                display: inline-block;
                 margin: 0;
                 margin-right: 5px;
                 margin-bottom: 5px;
@@ -39,15 +39,16 @@ margin-top: 2em;
             }
 
             a{
-                color: #fff;
+                color: #ec3529;
                 text-transform: capitalize;
+                -webkit-text-decoration: auto;
                 text-decoration: auto;
-                background: #ec3529;
+                background: #ec352929;
                 border-radius: 50px;
-                padding: 10px 15px;
+                padding: 8px 15px;
                 font-size: 14px;
                 font-weight: 500;
-                display: block;               
+                display: block;
                 line-height: 1;
 
                 :active, :focus, :hover{

@@ -10,6 +10,7 @@ export const useRelatedpostQuery = () => {
                 title
                 slug
                 uri
+                excerpt
                 featuredImage {
                 node {
                     id
@@ -25,6 +26,7 @@ export const useRelatedpostQuery = () => {
                     id
                     slug
                     uri
+                    name
                 }
             }
             }

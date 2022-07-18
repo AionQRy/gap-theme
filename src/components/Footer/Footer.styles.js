@@ -61,6 +61,7 @@ export const Wrapper = styled.footer`
       display: block;
       position: absolute;
       bottom: 0;
+      border-radius: 50px;
     }
     @media (max-width: 1024px) and (min-width: 992px){
       font-size: 21px;
