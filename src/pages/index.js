@@ -5,12 +5,14 @@ import * as React from "react"
 import Seo from "../components/SEO/SEO"
 // import * as styles from "../components/index.module.css"
 import Layout from "../components/Layout/Layout"
-import HeroSection from "../components/Home/HeroSection"
+import HeroSection from "../components/Home/HeroSection/HeroSection"
+import ServiceSection from "../components/Home/ServiceSection/ServiceSection"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <HeroSection/>
+    <ServiceSection/>
     <p>สวัสดี start here</p>
   </Layout>
 )
