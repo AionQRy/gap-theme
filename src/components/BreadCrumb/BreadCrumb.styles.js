@@ -20,7 +20,9 @@ border-bottom: 1px solid rgb(0 0 0 / 9%);
       opacity: 0.8;
     }
   }
-
+  span{
+    font-weight: 400;
+  }
   .divider {
     margin: 0 10px;
   }

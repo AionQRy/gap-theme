@@ -14,15 +14,14 @@ import {
     LineIcon,
 } from "react-share";
 
-const shareUrl = 'http://github.com';
-const title = 'GitHub';
+const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
-const Social = () => {
+const Social = ({title}) => {
   const [sticky, setSticky] = useState("");
 
   // on render, set listener
   useEffect(() => {
-    console.log("hello");
+    // console.log("hello");
     window.addEventListener("scroll", isSticky);
     return () => {
       window.removeEventListener("scroll", isSticky);
@@ -34,7 +33,7 @@ const Social = () => {
     const scrollTop = window.scrollY;
     const stickyClass = scrollTop >= 800 ? "is-sticky" : "";
     setSticky(stickyClass);
-    console.log(stickyClass);
+    // console.log(stickyClass);
   };
 
   const classes = `SocialHeader ${sticky}`;

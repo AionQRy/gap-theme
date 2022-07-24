@@ -51,8 +51,23 @@ position: relative;
             display: grid;
             grid-gap: 20px;
         }
-    }
 
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2 ,1fr);
+        }
+    
+        @media (max-width: 575.98px) {
+            grid-template-columns: repeat(1 ,1fr);
+        }
+    }
+    .image_top {
+        text-align: center;
+
+        .gatsby-image-wrapper {
+            margin: 0 auto;
+        }
+    }
+    
     .detail {
         display: grid;
         grid-gap: 10px;

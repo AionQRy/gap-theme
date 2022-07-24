@@ -54,13 +54,13 @@ const PostTemplate = ({ data }) => (
           </TitleBox>
 
           <AuthorBar data={data.post.author} date={data.post.date} />
-          <ContentBox>
-            <Social />
+          <ContentBox>        
             {data.post.content ? (
               <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
             ) : (
               <Notfound />
             )}
+            <Social title={data.post.title}/>
             <Term
               TermCategory={data.post.categories.nodes}
               TermTag={data.post.tags.nodes}

@@ -1,6 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { ArrowRight } from 'react-feather'
+import { StaticImage } from 'gatsby-plugin-image'
 import { BarTopping, DetailService, MainService, ServiceWrapper } from './ServiceSection.styles'
 
 const ServiceSection = () => {
@@ -18,8 +19,15 @@ const ServiceSection = () => {
                 <DetailService className="DetailService_Box">
                     <div className="Grid-Column">
                         <div className="List-Column">
-                            <div className="image_top">
-                                
+                            <div className="image_top">                     
+                            <StaticImage 
+                                 
+                            layout="constrained"
+                            alt="service-1"
+                            src={ "../../../images/service-1.png"}
+                            formats={["svg", "webp"]}
+                            placeholder= "tracedSVG"
+                            />
                             </div>
                             <div className="detail">
                                 <h3>รับทำเว็บ WordPress</h3>
@@ -31,7 +39,14 @@ const ServiceSection = () => {
                         </div>
                         <div className="List-Column">
                             <div className="image_top">
-                                
+                            <StaticImage 
+                                 
+                            layout="constrained"
+                            alt="service-2"
+                            src={ "../../../images/shopping-cart.png"}
+                            formats={["svg", "webp"]}
+                            placeholder= "tracedSVG"
+                            />
                             </div>
                             <div className="detail">
                                 <h3>รับทำเว็บไซต์ E-Commerce</h3>
@@ -43,7 +58,14 @@ const ServiceSection = () => {
                         </div>
                         <div className="List-Column">
                             <div className="image_top">
-                                
+                            <StaticImage 
+                                 
+                            layout="constrained"
+                            alt="service-3"
+                            src={ "../../../images/responsive-design.png"}
+                            formats={["svg", "webp"]}
+                            placeholder= "tracedSVG"
+                            />
                             </div>
                             <div className="detail">
                                 <h3>รับทำเว็บไซต์ Responsive</h3>
@@ -55,7 +77,14 @@ const ServiceSection = () => {
                         </div>
                         <div className="List-Column">
                             <div className="image_top">
-                                
+                            <StaticImage 
+                                 
+                            layout="constrained"
+                            alt="service-4"
+                            src={ "../../../images/web-design-2.png"}
+                            formats={["svg", "webp"]}
+                            placeholder= "tracedSVG"
+                            />
                             </div>
                             <div className="detail">
                                 <h3>รับทำเว็บ Applications</h3>

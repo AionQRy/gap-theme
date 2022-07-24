@@ -13,6 +13,9 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        formats: [`svg`, `webp`],
+        placeholder: `tracedSVG`,
+        backgroundColor: `transparent`,
       },
     },
     `gatsby-transformer-sharp`,

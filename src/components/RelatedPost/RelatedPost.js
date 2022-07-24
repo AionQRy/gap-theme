@@ -7,21 +7,29 @@ const RelatedPost = ({currentPost}) => {
 
   const allWpPost = useRelatedpostQuery();
   const all = allWpPost.allWpPost.edges;
-  console.log(currentPost);
+
+  const currentTwo = [currentPost];
+  // console.log("currentTwo",JSON.stringify(currentTwo));
+  console.log("currentTwo",currentTwo);
   // console.log(console.log('allpost = ' + JSON.stringify(all)));
 
-  const arr = [1, 2, 3, 4]
-const brr = [2]
-const res = arr.filter((f) => brr.includes(f))
-console.log(res)
 
-console.log(currentPost);
+  let Users = all.filter((itemA)=> {
+    return !currentTwo.find((itemB)=> {
+      return itemA.node.id.includes(itemB.id);
+    })
+  })
+  
+   console.log("Different: ",Users);
+
+// console.log("AllPost",JSON.stringify(all));
+// console.log("CurrentPost",JSON.stringify(currentPost));
 
 //เช็ค post ทั้งหมดว่ามี post นี้ไหม
-const ob1 = all.filter((f) => 
-  !f.node.slug.includes(currentPost.slug) 
-);
-console.log(ob1);
+// const ob1 = all.filter((f) => 
+//   !f.node.slug.includes(currentPost.slug) 
+// );
+// console.log(ob1);
 
   return (
     <RelatedWrapper>        
@@ -30,11 +38,11 @@ console.log(ob1);
               <h2>บทความที่คล้ายกัน</h2>
               <RelatedContainer>
                   {
-                   all.filter(
+                   all.slice(0,3).filter(
                      allList => !allList.node.slug.includes(currentPost.slug)
                      ).map( FilteredallList => (
-       
-                       <CardRelated data={FilteredallList.node} />
+                        // <h4>{FilteredallList.id }</h4>
+                      <CardRelated data={FilteredallList.node} />
                    ) )
                  }
               </RelatedContainer>
