@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Framework with My WebSite
+  WordPress Gatsby Framework with My WebSite
 </h1>
 
 # Getting Started
