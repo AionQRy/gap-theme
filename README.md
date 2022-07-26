@@ -11,7 +11,7 @@
 # Getting Started
 
 ```sh
-yarn install
+yarn add https://github.com/AionQRy/gap-theme.git
 yarn start
 ```
 
