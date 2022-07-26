@@ -19,4 +19,4 @@ Open [http://localhost:8000](http://localhost:8000).
 
 # Lineage
 
-Forked from [MFE Webpack Demo](https://github.com/mizx/mfe-webpack-demo)
+Forked from My Website
