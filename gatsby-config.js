@@ -47,16 +47,7 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `Kanit\:300,400,500,600,800`,
-          `Open Sans\:300,400,500,600,800` // you can also specify font weights and styles
-        ],
-        display: 'swap'
-      }
-    },
+
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

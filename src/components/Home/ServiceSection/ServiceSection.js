@@ -24,7 +24,7 @@ const ServiceSection = () => {
                                  
                             layout="constrained"
                             alt="service-1"
-                            src={ "../../../images/service-1.png"}
+                            src={ "../../../images/website.png"}
                             formats={["svg", "webp"]}
                             placeholder= "tracedSVG"
                             />

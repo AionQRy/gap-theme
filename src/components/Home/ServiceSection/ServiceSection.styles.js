@@ -66,6 +66,14 @@ position: relative;
         .gatsby-image-wrapper {
             margin: 0 auto;
         }
+
+        img {
+            padding: 20px;
+            background: #ec352908;
+            border-radius: 14px;
+            border: 1px solid #ec352924;
+            height: 120px;
+        }
     }
     
     .detail {
