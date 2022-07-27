@@ -43,7 +43,7 @@ const ServiceSection = () => {
                                  
                             layout="constrained"
                             alt="service-2"
-                            src={ "../../../images/shopping-cart.png"}
+                            src={ "../../../images/add-to-cart-one.png"}
                             formats={["svg", "webp"]}
                             placeholder= "tracedSVG"
                             />

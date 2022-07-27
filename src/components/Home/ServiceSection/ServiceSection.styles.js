@@ -68,11 +68,10 @@ position: relative;
         }
 
         img {
-            padding: 20px;
+            padding: 12px;
             background: #ec352908;
             border-radius: 14px;
-            border: 1px solid #ec352924;
-            height: 120px;
+            height: 80px;
         }
     }
     

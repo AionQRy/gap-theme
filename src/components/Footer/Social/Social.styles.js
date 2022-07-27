@@ -29,15 +29,18 @@ export const SocialStyle = styled.div`
     :hover{
       transform: scale(1.25);
     }
-    :hover svg{
+    :hover svg path{
       fill: #ffffff;
     }
   }
 
   ul li a svg {
     fill: #262626;
-    width: 24px;
-    height: 24px;
+    transform: scale(1.65);
+
+    rect {
+      fill: transparent;
+    }
   }
 
   ul li.list-social.linkedin a:hover {
