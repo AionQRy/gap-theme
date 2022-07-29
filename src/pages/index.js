@@ -1,5 +1,4 @@
 import * as React from "react"
-import "../typography/font/kanit/stylesheet.css";
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 

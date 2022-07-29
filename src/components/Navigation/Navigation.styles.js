@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
-  font-family: 'Open Sans','Kanit',sans-serif;
+  font-family: 'Kanit',sans-serif;
   text-transform: capitalize;
   color: #212121;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   display: none;
 
@@ -47,7 +47,7 @@ export const Wrapper = styled.nav`
       color: #262626;
       padding: 10px 20px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 1.2;
       gap: 3px;
 

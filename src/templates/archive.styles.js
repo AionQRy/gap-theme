@@ -21,7 +21,7 @@ export const ContentWrapper = styled.div`
 
 export const PageContent = styled.article`
 display: grid;
-grid-gap: 30px;
+grid-gap: 50px;
 
   h1{
     margin: 0;
@@ -42,7 +42,7 @@ grid-gap: 30px;
         font-size: 14px;
         text-transform: capitalize;
         color: #fff;
-        padding: 5px 10px;
+        padding: 8px 10px 5px;
         border-radius: 50px;
         font-weight: 300;
         line-height: 1.2;
@@ -56,6 +56,14 @@ grid-gap: 30px;
     @media (max-width: 575.98px) {
       font-size: 34px;
     }
+  }
+
+  @media (max-width: 1024px) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-gap: 20px;
   }
 `
 export const ArchiveWrapper = styled.div`
