@@ -2,30 +2,141 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 20px;
+max-width: 1140px;
+margin: 0 auto;
+padding: 5em 0;
+
+@media (max-width: 1024px) {
+  padding: 2em;
+}
+
+@media (max-width: 575.98px) {
+  padding: 2em 1.5em;
+}
 `
 
 export const ContentWrapper = styled.div`
   display: block;
-
-  @media (min-width: 992px) {
-    display: flex;
-  }
 `
 
 export const PageContent = styled.article`
-  margin: 20px 0 0 0;
+display: grid;
+grid-gap: 30px;
 
-  .dot-divider {
-    width: 100%;
-    height: 5px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid lightgrey;
+  h1{
+    margin: 0;
+    font-size: 56px;
+    font-weight: 500;
+    display: grid;
+    line-height: 1.1;
+    text-transform: capitalize;
+    color: #262626;
+    gap: 5px;
+    
+    :before{
+        content: 'รับทำเว็บไซต์';
+        display: block;
+        height: 100%;
+        background: #ec3529;
+        width: 100%;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 50px;
+        font-weight: 300;
+        line-height: 1.2;
+        max-width: 115px;
+        text-align: center;
+    }
+    @media (max-width: 1024px) {
+      font-size: 38px;
+      grid-gap: 10px;
+    }
+    @media (max-width: 575.98px) {
+      font-size: 34px;
+    }
   }
 `
+export const ArchiveWrapper = styled.div`
 
+
+`
+export const ArticleBox = styled.div`
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap: 50px;
+
+.Article_Post:first-child {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-gap: 40px;
+
+  h3 a {
+    font-size: 52px;
+    -webkit-line-clamp: 4;
+    line-height: 1.15;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  img {
+    height: 365px;
+  }
+}
+
+@media (max-width: 1024px) {
+  grid-gap: 20px;
+  
+  .Article_Post:first-child{
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+
+    h3 a {
+      font-size: 33px;
+      -webkit-line-clamp: 4;
+      line-height: 1.15;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    img {
+      height: 220px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+grid-template-columns: repeat(1,1fr);
+grid-gap: 20px;
+
+  .Article_Post:first-child {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    h3 a {
+      font-size: 18px;
+      -webkit-line-clamp: 2;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+  }
+}
+`
+export const PaginationBox = styled.div`
+
+
+`
 export const StyledH2 = styled.h2`
   font-weight: 500;
   font-size: 1.8rem;

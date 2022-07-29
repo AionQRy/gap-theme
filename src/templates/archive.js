@@ -15,7 +15,11 @@ import {
   StyledH2,
   StyledDate,
   StyledReadMore,
+  ArchiveWrapper,
+  ArticleBox,
+  PaginationBox,
 } from "./archive.styles"
+import Article from "../components/Article/Article"
 
 const archiveTemplate = ({
   data: { allWpPost },
@@ -39,29 +43,24 @@ const archiveTemplate = ({
       <ContentWrapper>
         {/* <ArchiveSidebar catId={catId} categories={categories.edges} /> */}
         <PageContent>
-          <h1 dangerouslySetInnerHTML={{ __html: catName }} />
-          {allWpPost.edges.map(post => (
-            <article key={post.node.id} className="entry-content">
-              <Link to={`/blog${post.node.uri}`}>
-                <StyledH2
-                  dangerouslySetInnerHTML={{ __html: post.node.title }}
-                />
-              </Link>
-              <StyledDate
-                dangerouslySetInnerHTML={{ __html: post.node.date }}
-              />
-              <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              <StyledReadMore to={`/blog${post.node.uri}`}>
-                Read More
-              </StyledReadMore>
-              <div className="dot-divider" />
-            </article>
-          ))}
-          {/* <Pagination
-            catUri={catUri}
-            page={currentPage}
-            totalPages={numPages}
-          /> */}
+          <div className="TitleCat">
+            <h1 dangerouslySetInnerHTML={{ __html: catName }} />
+          </div>       
+          <ArchiveWrapper>
+            <ArticleBox>
+              {allWpPost.edges.map(post => (
+                <Article data={post.node} />
+              ))}
+            </ArticleBox>
+            <PaginationBox>
+              {/* <Pagination
+                catUri={catUri}
+                page={currentPage}
+                totalPages={numPages}
+              /> */}
+            </PaginationBox>
+
+          </ArchiveWrapper>      
         </PageContent>
       </ContentWrapper>
     </Wrapper>
@@ -79,13 +78,31 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          id
-          title
-          excerpt
-          uri
-          slug
-          date(formatString: "DD MM YYYY")
-        }
+            id
+            title
+            slug
+            uri
+            excerpt
+            date(formatString: "DD/MM/YYYY")
+            featuredImage {
+              node {
+                  id
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData(sizes: "large")
+                    }
+                  }
+              }
+            }          
+            categories {
+                nodes {
+                    id
+                    slug
+                    uri
+                    name
+                }
+            }
+            }
       }
     }
   }

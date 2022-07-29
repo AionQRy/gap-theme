@@ -61,4 +61,11 @@ margin-top: 2em;
         }
     }
 
+    @media (max-width: 1024px) {
+    }
+    @media (max-width: 575.98px) {
+        padding-top: 1em;
+        margin-top: 1em;
+    }
+
 `
