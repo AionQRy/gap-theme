@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import bgGradient from '../../../images/bg-gradient.webp'; 
+import bgGradient from '../../../images/section-hero-3.webp'; 
 
 export const HeroWrapper = styled.div`
 display: block;
@@ -9,7 +9,7 @@ padding: 7em 0;
 `;
 
 export const BgHero = styled.div`
-background: #fff;
+background: #fafafa;
 background-image: url(${bgGradient});
 background-size: cover;
 background-position: center;
@@ -21,7 +21,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-opacity: 0.12;
+opacity: 1;
 z-index: -1;
 `;
 
@@ -35,7 +35,7 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-opacity: 1;
+opacity: 0;
 z-index: -1;
 `;
 
@@ -102,6 +102,11 @@ grid-gap: 50px;
             font-size: 16px;
             color: #262626;
             margin: 0;
+            padding: 10px 10px;
+            border-radius: 10px;
+            backdrop-filter: saturate(180%) blur(14px);
+            background: rgb(255 255 255 / 61%);
+            box-shadow: 1px 3px 13px 0 rgb(0 0 0 / 9%);
 
             svg {
                 background: #4fcbbf;

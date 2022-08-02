@@ -18,7 +18,7 @@ import {
   ArchiveWrapper,
   ArticleBox,
   PaginationBox,
-} from "./archive.styles"
+} from "./ArchiveStyle/archive.styles"
 import Article from "../components/Article/Article"
 
 const archiveTemplate = ({
