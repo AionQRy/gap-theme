@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
-import bgGradient from '../../../images/section-hero-3.webp'; 
+import bgGradient from '../../../images/section-hero-4.webp'; 
 
 export const HeroWrapper = styled.div`
 display: block;
 position: relative;
 padding: 7em 0;
+
+    @media (max-width: 1024px) {
+        padding: 3.5em 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 2em 0;
+    }
 `;
 
 export const BgHero = styled.div`
@@ -47,6 +54,17 @@ margin: 0 auto;
 grid-template-columns: 55% 45%;
 grid-gap: 50px;
 position: relative;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 2em;
+    }
+
+    @media (max-width: 575.98px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 `;
 
 export const HeroWrapperleft = styled.div`
@@ -69,6 +87,13 @@ grid-gap: 50px;
             -webkit-background-clip: text;
             text-transform: capitalize;
         }
+
+        @media (max-width: 1024px) {
+            font-size: 40px;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 34px;
+        }
     }
 
     h3.SubTitleHero {
@@ -84,6 +109,13 @@ grid-gap: 50px;
             background: linear-gradient(to bottom right,rgb(236 53 41) 25%,rgb(164 13 11) 100%);
             -webkit-background-clip: text;
             text-transform: capitalize;
+        }
+
+        @media (max-width: 1024px) {
+            font-size: 40px;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 34px;
         }
     }
 
@@ -126,6 +158,13 @@ grid-gap: 50px;
         font-size: 18px;
         color: #707070;
         font-weight: 300;
+
+        @media (max-width: 1024px) {
+            font-size: 16px;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 14px;
+        }
     }
 
     .DetailHeroBox{
@@ -156,6 +195,13 @@ grid-gap: 50px;
                 animation-timing-function:linear;
                 animation-iteration-count:1
             }
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+            @media (max-width: 575.98px) {
+                font-size: 14px;
+            }
         }
 
         a.OfferBtn {
@@ -185,12 +231,26 @@ grid-gap: 50px;
                 font-size: 18px;
                 color: #707070;
 
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 575.98px) {
+                    font-size: 14px;
+                }
+
                 span {
                     display: block;
                     font-size: 34px;
                     font-weight: 500;
                     color: #ec3529;
                     line-height: 1.4;
+
+                    @media (max-width: 1024px) {
+                        font-size: 28px;
+                    }
+                    @media (max-width: 575.98px) {
+                        font-size: 24px;
+                    }
                 }
             }
         }
@@ -200,6 +260,36 @@ grid-gap: 50px;
     .MainContentHero {
         display: grid;
         grid-gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+        grid-gap: 20px;
+    }
+    @media (max-width: 575.98px) {
+        grid-gap: 20px;
+
+        ul.ListNav {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }        
+        ul.ListNav li {
+            font-size: 14px;
+            gap: 7px;
+        }      
+        ul.ListNav li svg {
+            width: 16px;
+            height: 16px;
+        }       
+        .ListBox {
+            grid-row: 3;
+            display: none;
+        }
+        .TotalHeroBox {
+            padding: 0;
+        }
+        .TotalHeroBox {
+            display: none;
+        }
     }
 `;
 
