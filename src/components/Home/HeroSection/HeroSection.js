@@ -2,6 +2,7 @@ import React from 'react';
 import { Check, PhoneCall } from 'react-feather';
 import { Ball, BgBlur, BgHero, Container, HeroWrapper, HeroWrapperleft, HeroWrapperRight, HotLine, ItemBG } from './HeroSection.styles';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 const HeroSection = () => {
   return (
     <HeroWrapper>
@@ -54,7 +55,14 @@ const HeroSection = () => {
              
                 <ItemBG>
                     <Ball/>
-
+                    <StaticImage 
+                                 
+                                 layout="constrained"
+                                 alt="service-1"
+                                 src={ "../../../images/image-hero.svg"}
+                                 formats={["svg", "webp"]}
+                                 placeholder= "tracedSVG"
+                                 /> 
                     <HotLine>
                         <div className="right-bar"><PhoneCall/></div>
                         <div className="left-bar">

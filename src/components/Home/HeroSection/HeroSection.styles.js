@@ -134,11 +134,6 @@ grid-gap: 50px;
             font-size: 16px;
             color: #262626;
             margin: 0;
-            padding: 10px 10px;
-            border-radius: 10px;
-            backdrop-filter: saturate(180%) blur(14px);
-            background: rgb(255 255 255 / 61%);
-            box-shadow: 1px 3px 13px 0 rgb(0 0 0 / 9%);
 
             svg {
                 background: #4fcbbf;
@@ -300,18 +295,18 @@ position: relative;
 `;
 
 export const ItemBG = styled.div`
-display: grid;
-position: relative;
-background: #4fcbbf;
-height: 100%;
-width: 400px;
-border-radius: 100px;
-border-top-right-radius: 0;
-border-bottom-left-radius: 0;
-margin: 0 auto;
+
 
 `;
-
+// display: grid;
+// position: relative;
+// background: #4fcbbf;
+// height: 100%;
+// width: 400px;
+// border-radius: 100px;
+// border-top-right-radius: 0;
+// border-bottom-left-radius: 0;
+// margin: 0 auto;
 export const Ball = styled.div`
 display: block;
 height: 75px;
@@ -337,8 +332,8 @@ width: auto;
 border: 1px solid rgb(0 0 0 / 6%);
 border-radius: 15px;
 position: absolute;
-bottom: 40px;
-right: -89px;
+bottom: 100px;
+left: -90px;
 box-shadow: 0px 0px 39px rgb(118 118 118 / 24%);
 padding: 12px;
 
