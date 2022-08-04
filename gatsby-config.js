@@ -47,6 +47,7 @@ module.exports = {
     },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-styled-components`,
+    'gatsby-plugin-smoothscroll',
 
 
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -6,7 +6,7 @@ import { BarTopping, DetailService, MainService, ServiceWrapper } from './Servic
 
 const ServiceSection = () => {
   return (
-    <ServiceWrapper>
+    <ServiceWrapper id="ServiceWrapper">
         <div className="v-container">
             <BarTopping className="BarTopping_Box">
 

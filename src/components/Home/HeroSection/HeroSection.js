@@ -3,6 +3,7 @@ import { Check, PhoneCall } from 'react-feather';
 import { Ball, BgBlur, BgHero, Container, HeroWrapper, HeroWrapperleft, HeroWrapperRight, HotLine, ItemBG } from './HeroSection.styles';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 const HeroSection = () => {
   return (
     <HeroWrapper>
@@ -30,7 +31,7 @@ const HeroSection = () => {
                         โดยมืออาชีพประสบการณ์กว่า 7 ปี ผู้อยู่เบื้องหลัง ความสำเร็จขององค์กรต่างๆ</p>
                     </div>
                     <div className="BtnHeroBox">
-                        <Link className="DetailBtn">รายละเอียดบริการ</Link>
+                        <button onClick={() => scrollTo('#ServiceWrapper')} className="DetailBtn">รายละเอียดบริการ</button>
                         <Link className="OfferBtn">ขอใบเสนอราคา</Link>
                     </div>
                 </div>
@@ -70,7 +71,7 @@ const HeroSection = () => {
                         </div>
                     </HotLine>
                     <div className="BtnHeroBox">
-                        <Link className="DetailBtn">รายละเอียดบริการ</Link>
+                        <button onClick={() => scrollTo('#ServiceWrapper')} className="DetailBtn">รายละเอียดบริการ</button>
                         <Link className="OfferBtn">ขอใบเสนอราคา</Link>
                     </div>
                 </ItemBG>

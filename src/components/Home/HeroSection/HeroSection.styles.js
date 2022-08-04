@@ -171,6 +171,37 @@ grid-gap: 50px;
         gap: 20px;
         align-items: center;
 
+        button{
+            background: #ec3529;
+            color: #fff;
+            text-decoration: auto;
+            font-weight: 300;
+            padding: 8px 20px;
+            border-radius: 50px;
+            line-height: 1.2;
+            background: linear-gradient(135deg,#ec3529 35%,#940404 100%);
+            box-shadow: 1px 6px 12px 0 rgb(236 53 41 / 30%);
+            background: #ec3529;
+            border: 2px solid #ec3529;
+            font-size: 18px;
+            cursor: pointer;
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 575.98px) {
+                font-size: 14px;
+            }
+        }
+
+        button:active, button:focus, button:hover{
+            animation-name:elementor-animation-push;
+            animation-duration:.3s;
+            animation-timing-function:linear;
+            animation-iteration-count:1
+        }
+
         a {
             background: #ec3529;
             color: #fff;
