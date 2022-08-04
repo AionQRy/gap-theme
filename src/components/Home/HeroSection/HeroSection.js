@@ -69,6 +69,10 @@ const HeroSection = () => {
                             <h4>สายด่วนโทร <span>062-597-0504</span></h4>
                         </div>
                     </HotLine>
+                    <div className="BtnHeroBox">
+                        <Link className="DetailBtn">รายละเอียดบริการ</Link>
+                        <Link className="OfferBtn">ขอใบเสนอราคา</Link>
+                    </div>
                 </ItemBG>
 
             </HeroWrapperRight>

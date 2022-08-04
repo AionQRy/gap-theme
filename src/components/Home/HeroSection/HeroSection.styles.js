@@ -205,6 +205,10 @@ grid-gap: 50px;
             font-weight: 400;
             box-shadow: none;
         }
+
+        @media (max-width: 575.98px) {
+            display: none;
+        }
     }
     .TotalHeroBox{
         display: block;
@@ -292,11 +296,67 @@ export const HeroWrapperRight = styled.div`
 display: grid;
 position: relative;
 
+    img{
+        
+        @media (max-width: 575.98px) {
+            max-width: 230px;
+            margin: 0 auto;
+        }
+    }
+
+    .BtnHeroBox {
+        display: none;
+        gap: 20px;
+        align-items: center;
+
+        a {
+            background: #ec3529;
+            color: #fff;
+            text-decoration: auto;
+            font-weight: 300;
+            padding: 8px 20px;
+            border-radius: 50px;
+            line-height: 1.2;
+            background: linear-gradient(135deg,#ec3529 35%,#940404 100%);
+            box-shadow: 1px 6px 12px 0 rgb(236 53 41 / 30%);
+            background: #ec3529;
+            border: 2px solid #ec3529;
+            font-size: 18px;
+
+            :active, :focus, :hover{
+                animation-name:elementor-animation-push;
+                animation-duration:.3s;
+                animation-timing-function:linear;
+                animation-iteration-count:1
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+            @media (max-width: 575.98px) {
+                font-size: 14px;
+            }
+        }
+
+        a.OfferBtn {
+            background: #ffffff;
+            color: #ec3529;
+            font-weight: 400;
+            box-shadow: none;
+        }
+
+        @media (max-width: 575.98px) {
+            display: flex;
+        }
+    }
 `;
 
 export const ItemBG = styled.div`
-
-
+@media (max-width: 575.98px) {
+    display: grid;
+    grid-gap: 20px;
+    justify-content: center;
+}
 `;
 // display: grid;
 // position: relative;
@@ -317,6 +377,13 @@ border: 10px solid #fff;
 position: absolute;
 top: 0px;
 left: 0;
+
+@media (max-width: 1024px) {
+    display: none;
+}
+@media (max-width: 575.98px) {
+    display: none;
+}
 `;
 
 export const HotLine = styled.div`

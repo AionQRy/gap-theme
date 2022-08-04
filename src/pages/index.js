@@ -8,6 +8,7 @@ import Layout from "../components/Layout/Layout"
 import HeroSection from "../components/Home/HeroSection/HeroSection"
 import ServiceSection from "../components/Home/ServiceSection/ServiceSection"
 import RecentPostSection from "../components/Home/RecentPostSection/RecentPostSection"
+import Faq from "../components/Home/Faq/Faq"
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +16,7 @@ const IndexPage = () => (
     <HeroSection/>
     <ServiceSection/>
     <RecentPostSection/>
-    <p>สวัสดี start here</p>
+    <Faq/>
   </Layout>
 )
 
