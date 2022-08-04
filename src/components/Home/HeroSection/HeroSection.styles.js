@@ -64,6 +64,7 @@ position: relative;
     @media (max-width: 575.98px) {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
+        padding: 0 1.5em;
     }
 `;
 
@@ -435,5 +436,8 @@ padding: 12px;
             font-weight: 600; 
         }
     }
-    
+
+    @media (max-width: 575.98px) {
+        display: none;
+    }  
 `;
