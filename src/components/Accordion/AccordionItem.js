@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRight } from "react-feather";
 import { FaqQuestion } from "./Accordion.styles";
 
 const AccordionItem = ({
@@ -15,10 +16,11 @@ const AccordionItem = ({
         aria-expanded={ariaExpanded}
         aria-controls={`faq${index + 1}_desc`}
         data-qa="faq__question-button"
-        className={`faq__question-button ${fontWeightBold}`}
+        className={`faq__question-button faq${index + 1}_desc ${fontWeightBold}`}
         onClick={onClick}
       >
         {item.question}
+        <ArrowRight/>
       </button>
     </dt>
     <dd>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import { AccordionWrapper } from './Accordion.styles';
+import { AccordionWrapper, Faq } from './Accordion.styles';
 import AccordionItem from './AccordionItem';
+import { HelpCircle } from 'react-feather'
 
 const Accordion = ({ questionsAnswers }) => {
     const [activeIndex, setActiveIndex] = useState(1);
@@ -24,12 +25,13 @@ const Accordion = ({ questionsAnswers }) => {
   });
 
   return (
-    <div className="faq">
-      <h1 className="faq__title">FAQ</h1>
+    <Faq className="faq">
+      <h2 className="faq__title"><HelpCircle/>คำถามที่พบบ่อย</h2>
+      <p>รวมคำถามที่ลูกค้าต้องการอยากรู้เกี่ยวกับ การทำเว็บไซต์ ด้วย WordPress จากบริษัท รับทำ WordPress</p>
       <AccordionWrapper>
         <dl className="faq__list">{renderedQuestionsAnswers}</dl>
       </AccordionWrapper>      
-    </div>
+    </Faq>
   );
 }
 

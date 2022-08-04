@@ -4,6 +4,13 @@ export const ServiceWrapper = styled.div`
 padding: 5em 0;
 display: block;
 position: relative;
+    @media (max-width: 1024px) {
+        padding: 3em 2em;
+    }
+
+    @media (max-width: 575.98px) {
+        padding: 2em 1.5em;
+    }
 `;
 
 export const BarTopping = styled.div`
@@ -25,6 +32,14 @@ grid-gap: 3em;
             text-align: center;
             font-weight: 600;
             color: #262626;
+
+            @media (max-width: 1024px) {
+                font-size: 43px;
+            }
+    
+            @media (max-width: 575.98px) {
+                font-size: 34px;
+            }
         }
 
         p {
@@ -34,6 +49,14 @@ grid-gap: 3em;
             color: #707070;
             font-weight: 300;
             text-align: center;
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+    
+            @media (max-width: 575.98px) {
+                font-size: 16px;
+            }
         }
     }
 `;
@@ -86,6 +109,14 @@ position: relative;
             text-align: center;
             margin: 0;
             font-size: 23px;
+
+            @media (max-width: 1024px) {
+                font-size: 21px;
+            }
+        
+            @media (max-width: 575.98px) {
+                font-size: 18px;
+            }
         }
 
         p {
@@ -95,6 +126,11 @@ position: relative;
             color: #707070;
             font-weight: 300;
             text-align: center;
+            height: 85px;
+
+            @media (max-width: 575.98px) {
+                height: 100%;
+            }
         }
     }
 
@@ -126,6 +162,16 @@ position: relative;
                 border-radius: 50px;
                 padding: 2px;
                 transition: all ease-in-out 350ms;
+
+                @media (max-width: 1024px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            
+                @media (max-width: 575.98px) {
+                    width: 16px;
+                    height: 16px;
+                }
             }
 
             :hover{
@@ -135,7 +181,16 @@ position: relative;
                 svg{
                     background: #fff;
                     stroke: #ec3529;
-                }
+                } 
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 16px;
+            }
+        
+            @media (max-width: 575.98px) {
+                padding: 7px 17px;
+                font-size: 15px;
             }
         }
     }
