@@ -49,6 +49,7 @@ const PageContent = styled.article`
     font-size: 56px;
     font-weight: 600;
     display: grid;
+    grid-gap: 8px;
     line-height: 1.1;
     text-transform: capitalize;
     
@@ -58,7 +59,7 @@ const PageContent = styled.article`
         height: 100%;
         background: #ec3529;
         width: 100%;
-        font-size: 14px;
+        font-size: 15px;
         text-transform: capitalize;
         color: #fff;
         padding: 5px 10px;

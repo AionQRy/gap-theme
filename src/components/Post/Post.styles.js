@@ -51,7 +51,7 @@ export const TitleBox = styled.div`
         height: 100%;
         background: #ec3529;
         width: 100%;
-        font-size: 14px;
+        font-size: 15px;
         text-transform: capitalize;
         color: #fff;
         padding: 5px 10px;
