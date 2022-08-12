@@ -9,6 +9,7 @@ import RecentPostSection from "../components/Home/RecentPostSection/RecentPostSe
 import Faq from "../components/Home/Faq/Faq"
 import PriceSection from "../components/Home/PriceSection/PriceSection"
 import { useHomeQuery } from "../hook/useHomeQuery"
+import WhatAbout from "../components/Home/WhatAbout/WhatAbout"
 
 const IndexPage = () => {
   const {HomePage}  = useHomeQuery();
@@ -20,6 +21,7 @@ const IndexPage = () => {
     <Seo title="Home" />
     <HeroSection/>
     <ServiceSection/>
+    <WhatAbout/>
     <OptionSection topTitle={HomePage.home.labelOption} detail={HomePage.home.titleOption} options={HomePage.home.optionsGrid}/>
     <RecentPostSection topTitle={HomePage.home.labelBlog} detail={HomePage.home.titleBlog}/>
     <Faq topTitle={HomePage.home.labelFaq} detail={HomePage.home.titleFaq} accordion={HomePage.home.faq}/>

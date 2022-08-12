@@ -6,7 +6,6 @@ import { HelpCircle } from 'react-feather'
 const Accordion = ({ questionsAnswers, data }) => {
     const [activeIndex, setActiveIndex] = useState(1);
  
-    console.log(questionsAnswers);
     const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
     const showDescription = index === activeIndex ? "show-description" : "";
     const fontWeightBold = index === activeIndex ? "font-weight-bold" : "";
