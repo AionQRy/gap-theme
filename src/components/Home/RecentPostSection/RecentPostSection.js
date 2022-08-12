@@ -3,17 +3,16 @@ import { MainWrapper, RecantPost, SectionWrapper } from './RecentPostSection.sty
 import CardRelated from '../../RelatedPost/CardRelated/CardRelated';
 import { useRelatedpostQuery } from '../../../hook/useRelatedpostQuery';
 
-const RecentPostSection = () => {
+const RecentPostSection = ({topTitle , detail}) => {
     const allWpPost = useRelatedpostQuery();
     const all = allWpPost.allWpPost.edges;
-    console.log(all);
   return (
     <SectionWrapper>
         <div className="v-container">
             <MainWrapper>
                 <div className="TitleService">
-                    <h2>อัพเดทข่าวสารล่าสุด</h2>
-                    <p>บทความต่างๆ เกี่ยวกับการทำเว็บไซต์ WordPress โดยทีมงาน รับทำ WordPress</p>
+                    <h2>{topTitle}</h2>
+                    <p>{detail}</p>
                 </div>
                 <RecantPost>
                 {

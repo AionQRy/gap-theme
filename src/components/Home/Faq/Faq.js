@@ -3,7 +3,10 @@ import { FaqWrapper } from './Faq.styles';
 import Accordion from '../../Accordion/Accordion';
 import { StaticImage } from 'gatsby-plugin-image';
 
-const questionsAnswers = [
+const Faq = ({topTitle, detail, accordion}) => {
+
+  const data = {topTitle, detail};
+  const questionsAnswers = [
     {
       question: "ทำเว็บไซต์ด้วย WordPress ดีไหม?",
       answer:
@@ -32,7 +35,6 @@ const questionsAnswers = [
     },
   ];
 
-const Faq = () => {
   return (
     <FaqWrapper>
       <div className="v-container">
@@ -48,7 +50,7 @@ const Faq = () => {
           /> 
           </div>
           <div className="grid-column grid-column-2">
-            <Accordion questionsAnswers={questionsAnswers} />
+            <Accordion questionsAnswers={accordion} data={data} />
           </div>
         </div>                      
           

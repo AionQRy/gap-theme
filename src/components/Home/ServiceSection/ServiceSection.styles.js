@@ -34,7 +34,7 @@ grid-gap: 3em;
             color: #262626;
 
             @media (max-width: 1024px) {
-                font-size: 43px;
+                font-size: 38px;
             }
     
             @media (max-width: 575.98px) {

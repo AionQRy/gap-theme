@@ -1,26 +1,53 @@
 import React from 'react'
 import { OptionWrapper } from './OptionSection.styles'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
+const OptionSection = ({topTitle, detail, options}) => {
 
-const OptionSection = () => {
   return (
     <OptionWrapper>
-        <div className="TitleService">
-            <h2>สิ่งที่คุณจะได้รับ</h2>
-            <p>พิเศษสำหรับลูกค้าทำเว็บไซต์ด้วย WordPress เรามีฟังก์ชั่นที่จำเป็นต่อเว็บไซต์คุณให้มากกมาย ซึ่งทำให้เว็บไซต์ของคุณนั้นระบบครบถ้วนและดีกว่าเว็บไซต์คู่แข่งแน่นอน</p>
-        </div>
-        <div className="Detail">
-          <div className="CardOption">
-              <div className="image-option">
-                
-              </div>
-              <div className="title-option">
+        <div className="BoxDetail">
+            <div className="TitleOption">
+            {topTitle.length > 0 ? (
+                <h2>{topTitle}</h2>
+            ):null }
+            {detail.length > 0 ? (
+                <p>{detail}</p>
+            ):null }
+            </div>
+            <div className="v-container">
+                <div className="Detail">
+                      {options.length !== 0
+                              ? options.map((data) => (
+                                <div className="CardOption">
+                                  <div className="image-option">      
+                                    <GatsbyImage
+                                      layout="constrained"
+                                      image={
+                                        data.image.localFile.childImageSharp.gatsbyImageData
+                                      }
+                                      formats={["svg", "webp"]}
+                                      placeholder= "tracedSVG"
+                                      alt={data.title}
+                                    />                  
+                                  </div>
+                                  {data.title.length > 0 ? (
+                                  <div className="title-option">
+                                    <h4>{data.title}</h4>
+                                  </div>
+                                  ):null }
+                                  {data.detail.length > 0 ? (
+                                  <div className="detail-option">
+                                      <p>{data.detail}</p>
+                                  </div>
+                                  ):null }
+                                </div>
+                              ))
+                              : null
+                      }
 
-              </div>
-              <div className="detail-option">
-                
-              </div>
-          </div>
+                </div>
+            </div>
         </div>
         </OptionWrapper>
   )

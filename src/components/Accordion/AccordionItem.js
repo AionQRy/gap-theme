@@ -10,7 +10,7 @@ const AccordionItem = ({
   index,
   onClick,
 }) => (
-  <FaqQuestion className="faq__question" key={item.question}>
+  <FaqQuestion className="faq__question" key={item.faqText}>
     <dt>
       <button
         aria-expanded={ariaExpanded}
@@ -19,7 +19,7 @@ const AccordionItem = ({
         className={`faq__question-button faq${index + 1}_desc ${fontWeightBold}`}
         onClick={onClick}
       >
-        {item.question}
+        {item.faqText}
         <ArrowRight/>
       </button>
     </dt>
@@ -29,7 +29,7 @@ const AccordionItem = ({
         data-qa="faq__desc"
         className={`faq__desc ${showDescription}`}
       >
-        {item.answer}
+        {item.faqDetail}
       </p>
     </dd>
   </FaqQuestion>

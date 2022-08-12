@@ -3,9 +3,10 @@ import { AccordionWrapper, Faq } from './Accordion.styles';
 import AccordionItem from './AccordionItem';
 import { HelpCircle } from 'react-feather'
 
-const Accordion = ({ questionsAnswers }) => {
+const Accordion = ({ questionsAnswers, data }) => {
     const [activeIndex, setActiveIndex] = useState(1);
-
+ 
+    console.log(questionsAnswers);
     const renderedQuestionsAnswers = questionsAnswers.map((item, index) => {
     const showDescription = index === activeIndex ? "show-description" : "";
     const fontWeightBold = index === activeIndex ? "font-weight-bold" : "";
@@ -26,8 +27,14 @@ const Accordion = ({ questionsAnswers }) => {
 
   return (
     <Faq className="faq">
-      <h2 className="faq__title"><HelpCircle/>คำถามที่พบบ่อย</h2>
-      <p>รวมคำถามที่ลูกค้าต้องการอยากรู้เกี่ยวกับ การทำเว็บไซต์ ด้วย WordPress จากบริษัท รับทำ WordPress</p>
+      {data.topTitle.length > 0 ? (
+        <h2 className="faq__title"><HelpCircle/>{data.topTitle}</h2>
+      ):null }
+
+      {data.detail.length > 0 ? (
+        <p>{data.detail}</p>
+      ):null }
+         
       <AccordionWrapper>
         <dl className="faq__list">{renderedQuestionsAnswers}</dl>
       </AccordionWrapper>      
