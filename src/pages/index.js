@@ -21,7 +21,7 @@ const IndexPage = () => {
     <Seo title="Home" />
     <HeroSection/>
     <ServiceSection/>
-    <WhatAbout/>
+    <WhatAbout whatAbout={HomePage.home.repeaterAbout}/>
     <OptionSection topTitle={HomePage.home.labelOption} detail={HomePage.home.titleOption} options={HomePage.home.optionsGrid}/>
     <RecentPostSection topTitle={HomePage.home.labelBlog} detail={HomePage.home.titleBlog}/>
     <Faq topTitle={HomePage.home.labelFaq} detail={HomePage.home.titleFaq} accordion={HomePage.home.faq}/>

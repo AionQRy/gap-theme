@@ -27,7 +27,7 @@ const OptionSection = ({topTitle, detail, options}) => {
                                         data.image.localFile.childImageSharp.gatsbyImageData
                                       }
                                       formats={["svg", "webp"]}
-                                      placeholder= "tracedSVG"
+                                      placeholder="blurred"
                                       alt={data.title}
                                     />                  
                                   </div>

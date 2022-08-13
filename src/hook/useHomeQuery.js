@@ -4,7 +4,7 @@ export const useHomeQuery = () => {
   const data = useStaticQuery(graphql`
 query HomeQuery {
     HomePage: wpPage(isFrontPage: {eq: true}) {
-    id
+      id
     title
     home {
       faq {
@@ -28,6 +28,30 @@ query HomeQuery {
       titleBlog
       titleFaq
       titleOption
+      repeaterAbout {
+        detailAbout
+        iconAbout {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        labelAbout
+        imageAbout {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+        linkPost {
+          ... on WpPost {
+            id
+            uri
+          }
+        }
+      }
     }
   }
 }
