@@ -3,17 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useHomeQuery = () => {
   const data = useStaticQuery(graphql`
 query HomeQuery {
-    HomePage: wpPage(isFrontPage: {eq: true}) {
-      id
+  HomePage: wpPage(isFrontPage: {eq: true}) {
+    id
     title
     home {
       faq {
         faqDetail
         faqText
       }
-      labelBlog
-      labelFaq
-      labelOption
       optionsGrid {
         detail
         image {
@@ -49,6 +46,41 @@ query HomeQuery {
           ... on WpPost {
             id
             uri
+          }
+        }
+      }
+      titleService
+      titleWhy
+      subTitleWhy
+      subTitleService
+      subTitleOption
+      subTitleBlog
+      subTitleFaq
+      repeaterService {
+        detailService
+        labelService
+        linkPost {
+          ... on WpPost {
+            id
+            uri
+          }
+        }
+        iconService {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+        }
+      }
+      repeaterWhy {
+        labelWhy
+        detailWhy
+        iconWhy {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
           }
         }
       }

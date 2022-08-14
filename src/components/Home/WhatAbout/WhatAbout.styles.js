@@ -121,6 +121,13 @@ position: relative;
                     transition: all ease-in-out 350ms;
                 }
 
+                :active, :focus, :hover{
+                    animation-name:elementor-animation-push;
+                    animation-duration:.3s;
+                    animation-timing-function:linear;
+                    animation-iteration-count:1
+                }
+
                 @media (max-width: 1024px) {
                     font-size: 16px;
                 }

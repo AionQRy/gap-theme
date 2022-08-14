@@ -10,6 +10,7 @@ import Faq from "../components/Home/Faq/Faq"
 import PriceSection from "../components/Home/PriceSection/PriceSection"
 import { useHomeQuery } from "../hook/useHomeQuery"
 import WhatAbout from "../components/Home/WhatAbout/WhatAbout"
+import WhyWordpress from "../components/Home/WhyWordpress/WhyWordpress"
 
 const IndexPage = () => {
   const {HomePage}  = useHomeQuery();
@@ -18,13 +19,29 @@ const IndexPage = () => {
 
   return(
   <Layout>
-    <Seo title="Home" />
+    <Seo subTitle="Home" />
     <HeroSection/>
     <ServiceSection/>
     <WhatAbout whatAbout={HomePage.home.repeaterAbout}/>
-    <OptionSection topTitle={HomePage.home.labelOption} detail={HomePage.home.titleOption} options={HomePage.home.optionsGrid}/>
-    <RecentPostSection topTitle={HomePage.home.labelBlog} detail={HomePage.home.titleBlog}/>
-    <Faq topTitle={HomePage.home.labelFaq} detail={HomePage.home.titleFaq} accordion={HomePage.home.faq}/>
+    <WhyWordpress
+      topTitle={HomePage.home.titleWhy} 
+      detail={HomePage.home.subTitleWhy} 
+      options={HomePage.home.repeaterWhy}
+      />
+    <OptionSection 
+      topTitle={HomePage.home.titleOption} 
+      detail={HomePage.home.subTitleOption} 
+      options={HomePage.home.optionsGrid}
+    />
+    <RecentPostSection 
+      topTitle={HomePage.home.titleBlog} 
+      detail={HomePage.home.subTitleBlog}
+      />
+    <Faq 
+      topTitle={HomePage.home.titleFaq} 
+      detail={HomePage.home.subTitleFaq} 
+      accordion={HomePage.home.faq}
+      />
     <PriceSection/>
   </Layout>
 )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutSection, AboutWrapper, Row, RowAbout } from './WhatAbout.styles';
+import { AboutSection, AboutWrapper, RowAbout } from './WhatAbout.styles';
 import { Link } from 'gatsby';
 import { ArrowRight } from 'react-feather';
 import { GatsbyImage } from 'gatsby-plugin-image'
