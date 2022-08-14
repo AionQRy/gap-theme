@@ -191,7 +191,7 @@ grid-gap: 50px;
             }
 
             @media (max-width: 575.98px) {
-                font-size: 14px;
+                font-size: 15px;
             }
         }
 

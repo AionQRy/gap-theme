@@ -6,7 +6,6 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const WhatAbout = ({whatAbout}) => {
 
-    console.log(whatAbout);
   return (
     <AboutWrapper>
         <div className="v-container">

@@ -4,12 +4,26 @@ export const AboutWrapper = styled.div`
 display: block;
 position: relative;
 padding: 5em 0;
+
+    @media (max-width: 1024px) {
+        padding: 3em 2em;
+    }
+    @media (max-width: 575.98px) {
+        padding: 3em 1.5em;
+    }
 `;
 
 export const RowAbout = styled.div`
 display: grid;
 position: relative;
 grid-gap: 7em;
+
+    @media (max-width: 1024px) {
+        grid-gap: 3em;
+    }
+    @media (max-width: 575.98px) {
+        grid-gap: 35px;
+    }
 `;
 
 
@@ -21,6 +35,7 @@ position: relative;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 50px;
+        align-items: center;
 
         .TitleAbout {
             display: flex;
@@ -53,6 +68,13 @@ position: relative;
                 font-weight: 600;
                 color: #262626;
                 display: block;
+
+                @media (max-width: 1024px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 575.98px) {
+                    font-size: 26px;
+                }
             }
             
             p {
@@ -62,6 +84,13 @@ position: relative;
                 color: #707070;
                 font-weight: 300;
                 text-align: left;
+
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 575.98px) {
+                    font-size: 14px;
+                }
             }
 
             a.BtnReadmore {
@@ -91,6 +120,14 @@ position: relative;
                     padding: 2px;
                     transition: all ease-in-out 350ms;
                 }
+
+                @media (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                
+                @media (max-width: 575.98px) {
+                    font-size: 15px;
+                }
             }
         } 
 
@@ -98,19 +135,47 @@ position: relative;
             border-radius: 15px;
             -webkit-box-shadow: 5px 8px 29px -5px rgb(166 166 166 / 35%);
             height: 355px;
+
+            @media (max-width: 1024px) {
+                height: 185px;
+            }
+            @media (max-width: 575.98px) {
+                height: 100%;
+            }
         }
+
+        @media (max-width: 1024px) {
+            gap: 20px;
+            align-items: center;
+        }
+
+        @media (max-width: 575.98px) {
+            grid-template-columns: 1fr;
+            gap: 35px;
+        }
+
     }
 
     :nth-child(2n) .ImageAbout {
         grid-column: 1 / 2;
         height: 100%;
-        display: block;
+        display: flex;
+        align-items: center;
         padding: 0;
         grid-row: 1;
+
+        @media (max-width: 575.98px) {
+            grid-column: span 1;
+            grid-row: 2;
+        }
     }
     
     :nth-child(2n) .TitleAbout {
         grid-column: 2 / 2;
         grid-row: 1;
+
+        @media (max-width: 575.98px) {
+            grid-column: span 1;
+        }
     }
 `;
