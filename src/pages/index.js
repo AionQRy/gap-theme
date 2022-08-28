@@ -11,6 +11,7 @@ import PriceSection from "../components/Home/PriceSection/PriceSection"
 import { useHomeQuery } from "../hook/useHomeQuery"
 import WhatAbout from "../components/Home/WhatAbout/WhatAbout"
 import WhyWordpress from "../components/Home/WhyWordpress/WhyWordpress"
+import Reference from "../components/Home/Reference/Reference"
 
 const IndexPage = () => {
   const {HomePage}  = useHomeQuery();
@@ -22,6 +23,7 @@ const IndexPage = () => {
     <Seo subTitle="Home" />
     <HeroSection/>
     <ServiceSection/>
+    <Reference/>
     <WhatAbout whatAbout={HomePage.home.repeaterAbout}/>
     <WhyWordpress
       topTitle={HomePage.home.titleWhy} 
